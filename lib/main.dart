@@ -174,7 +174,7 @@ class _MyGameState extends State<MyGame> {
               color: const Color.fromARGB(255, 39, 16, 15), width: 2)),
       child: TextButton(
           onPressed: () {
-            //this part is resposible for showing the Xs and Os in its player tern if he pressed on empty box
+            //this part is responsible for showing the Xs and Os in the current player's turn if they pressed on empty box
             if (_matrix[row][col].isEmpty) {
               setState(() {
                 _matrix[row][col] = _char;
@@ -192,7 +192,7 @@ class _MyGameState extends State<MyGame> {
     );
   }
 
-//this function used to checkif there were a winner after each player plays
+//this function used to check if there is a winner after each player plays
   void checkWinner(int x, int y) {
     int col = 0, row = 0, mdiag = 0, sdiag = 0;
     int n = _matrix.length - 1;
